@@ -151,8 +151,8 @@ public abstract class ObdCommand {
 
 
     private static Pattern WHITESPACE_PATTERN = Pattern.compile("\\s");
-    private static Pattern BUSINIT_PATTERN = Pattern.compile("(BUS INIT)|(BUSINIT)|(\\.)");
-    private static Pattern SEARCHING_PATTERN = Pattern.compile("SEARCHING");
+    private static Pattern BUSINIT_PATTERN = Pattern.compile("(BUS INIT)|(BUSINIT)|(BUSINIT\\:OK)|(\\.)");
+    private static Pattern SEARCHING_PATTERN = Pattern.compile("SEARCHING\\.*");
     private static Pattern DIGITS_LETTERS_PATTERN = Pattern.compile("([0-9A-F])+");
 
     protected String replaceAll(Pattern pattern, String input, String replacement) {
